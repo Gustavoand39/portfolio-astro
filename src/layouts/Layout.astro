@@ -1,0 +1,33 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import "../styles/globals.css";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Portfolio de Gustavo, un desarrollador web especializado en frontend con experiencia en HTML, CSS, JavaScript, React y NextJS. Descubre proyectos, habilidades y contacto."
+    />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+
+  <body class="bg-white text-gray-700 flex flex-col justify-center">
+    <Header client:visible />
+
+    <main class="w-full pt-16">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>
