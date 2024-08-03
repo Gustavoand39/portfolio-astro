@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 
 import ReactIcon from "../../components/icons/ReactIcon.astro";
@@ -62,8 +62,8 @@ const data = {
       <ul class="flex flex-wrap justify-center gap-4 mt-4">
         {
           data.techs.map((tech) => (
-            <li class="bg-slate-200 flex items-center gap-2 px-3 py-2 rounded-full text-xs">
-              <tech.icon className="h-6 w-6 bg-slate-100 rounded-full p-1" />
+            <li class="bg-slate-200 dark:bg-neutral-600 flex items-center gap-2 px-3 py-2 rounded-full text-xs">
+              <tech.icon className="h-6 w-6 bg-slate-100 dark:bg-neutral-500 rounded-full p-1" />
               {tech.name}
             </li>
           ))
