@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import Layout from "../../layouts/Layout.astro";
 
 import ReactIcon from "../../components/icons/ReactIcon.astro";
@@ -34,12 +35,12 @@ const data = {
 <Layout title={data.title}>
   <section class="w-full md:w-4/5 lg:w-3/5 mx-auto py-12 px-4">
     <figure>
-      <img
+      <Image
         class="object-contain h-44 sm:h-64 md:h-96 w-full rounded-lg"
         src={data.image}
         alt={data.key}
         transition:name={`project ${data.key}`}
-        loading="lazy"
+        loading="eager"
         height={600}
         width={800}
       />

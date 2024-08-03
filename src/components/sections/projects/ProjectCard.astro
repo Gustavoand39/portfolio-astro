@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import LinkButton from "../../ui/LinkButton";
 
 const { key, title, description, image } = Astro.props;
@@ -13,11 +14,13 @@ const { key, title, description, image } = Astro.props;
   </header>
 
   <figure class="w-full aspect-w-16 aspect-h-9">
-    <img
+    <Image
       class="rounded-lg w-full h-full object-cover"
       src={image}
-      alt="Project Image"
+      alt={`Project ${title}`}
       transition:name={`project ${key}`}
+      height={400}
+      width={600}
     />
   </figure>
 
