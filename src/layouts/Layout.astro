@@ -1,6 +1,5 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import "../styles/globals.css";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer.astro";
 
@@ -18,13 +17,23 @@ const { title } = Astro.props;
       content="Portfolio de Gustavo, un desarrollador web especializado en frontend con experiencia en HTML, CSS, JavaScript, React y NextJS. Descubre proyectos, habilidades y contacto."
     />
     <title>{title}</title>
+    <link
+      rel="preload"
+      href="../styles/globals.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="../styles/globals.css" /></noscript>
+    <meta name="robots" content="index, follow" />
     <ViewTransitions />
   </head>
 
-  <body class="bg-white text-gray-700 flex flex-col justify-center">
+  <body
+    class="bg-white text-gray-700 flex flex-col justify-center min-h-screen"
+  >
     <Header client:visible />
 
-    <main class="w-full pt-16">
+    <main class="flex-1 w-full pt-16">
       <slot />
     </main>
 

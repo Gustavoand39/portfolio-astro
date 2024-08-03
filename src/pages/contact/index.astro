@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Contacto">
@@ -9,6 +9,7 @@ import Layout from "../layouts/Layout.astro";
     <form
       name="contact"
       method="POST"
+      action="/contact/success"
       data-netlify-recaptcha="true"
       data-netlify="true"
       class="space-y-6"
