@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="fixed top-4 w-full left-1/2 transform -translate-x-1/2 z-30">
       <div
-        className="border border-slate-500 bg-gray-100/80 backdrop-blur-md flex justify-between items-center gap-12 px-6 py-3 md:px-12 
+        className="border border-slate-200 bg-gray-100/80 backdrop-blur-md flex justify-between items-center gap-12 px-6 py-3 md:px-12 
         mx-auto rounded-full shadow-small w-5/6"
       >
         <div className="flex items-center gap-2">
