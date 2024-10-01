@@ -8,7 +8,7 @@ export const workExperience = [
     period: "2023 - 2024",
     description:
       "Desempeñando un rol de desarrollador Frontend, se rediseñó y mejoró la aplicación SysChat, " +
-      "una aplicación de chat en tiempo real para la comunicación entre el personal y los clientes de la empresa.\n\n" +
+      "una aplicación de chat en tiempo real para la comunicación entre el personal y los clientes de la empresa.\n" +
       "Se aplicaron conocimientos de React, Bootstrap y Socket.io para mejorar la interfaz de usuario y la experiencia del usuario. " +
       "Además de adoptar un marco de trabajo ágil para la gestión de tareas y la colaboración con el equipo de Backend.",
   },
@@ -30,7 +30,9 @@ export const workExperience = [
               {company} | {period}
             </span>
             <h3 class="font-semibold text-xl">{position}</h3>
-            <p class="mt-2 text-justify whitespace-pre-line">{description}</p>
+            <p class="mt-2 text-justify text-sm md:text-base leading-relaxed md:leading-loose tracking-tight whitespace-pre-line">
+              {description}
+            </p>
           </div>
         </div>
       </div>
