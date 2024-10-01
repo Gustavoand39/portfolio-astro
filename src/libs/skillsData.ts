@@ -12,6 +12,7 @@ import MysqlIcon from "../components/icons/MysqlIcon.astro";
 import GitIcon from "../components/icons/GitIcon.astro";
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import FigmaIcon from "../components/icons/FigmaIcon.astro";
+import PostmanIcon from "../components/icons/PostmanIcon.astro";
 
 export const skills = [
   {
@@ -75,6 +76,10 @@ export const skills = [
         name: "Figma",
         icon: FigmaIcon,
       },
+      {
+        name: "Postman",
+        icon: PostmanIcon,
+      }
     ],
   },
 ];

@@ -39,7 +39,7 @@ section {
 }
 
 .menu-item {
-  @apply cursor-pointer hover:text-orange-400 p-1.5;
+  @apply cursor-pointer hover:text-blue-600 p-1.5;
 }
 
 .menu-btn {

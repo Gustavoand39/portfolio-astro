@@ -5,34 +5,31 @@ import LinkButton from "../../ui/LinkButton";
 const { key, title, description, image } = Astro.props;
 ---
 
-<article
-  class="bg-white flex flex-col justify-between gap-6 p-6 rounded-lg shadow-md"
+<a
+  href={`/projects/${key}`}
+  aria-label={`View project ${title}`}
+  class="block group"
 >
-  <header class="flex-1">
-    <h3 class="text-xl font-bold">{title}</h3>
-    <p class="mt-2">{description}</p>
-  </header>
-
-  <figure class="w-full aspect-w-16 aspect-h-9">
-    <Image
-      class="rounded-lg w-full h-full object-cover"
-      src={image}
-      alt={`Project ${title}`}
-      transition:name={`project ${key}`}
-      loading="lazy"
-      height={400}
-      width={600}
-    />
-  </figure>
-
-  <div>
-    <LinkButton
-      ariaLabel="View project"
-      href={`/projects/${key}`}
-      target="_self"
-      className="rounded-lg w-full"
+  <article
+    class="bg-white flex flex-col justify-between gap-4 p-6 rounded-lg shadow-md
+    transition-transform transform md:hover:-translate-y-1 md:hover:shadow-lg md:duration-300"
+  >
+    <h3
+      class="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300"
     >
-      Ver proyecto
-    </LinkButton>
-  </div>
-</article>
+      {title}
+    </h3>
+
+    <figure class="w-full aspect-w-16 aspect-h-9">
+      <Image
+        class="rounded-lg w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-300"
+        src={image}
+        alt={`Project ${title}`}
+        transition:name={`project ${key}`}
+        loading="lazy"
+        height={400}
+        width={600}
+      />
+    </figure>
+  </article>
+</a>
